@@ -419,6 +419,8 @@
   font-weight: 400;
   cursor: pointer;
   transition: all 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .quick-reply-btn:hover {
@@ -473,4 +475,192 @@
 .send-btn svg {
   width: 22px;
   height: 22px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .script-page {
+    padding: 6rem 4rem 2rem;
+    gap: 3rem;
+  }
+
+  .code-editor {
+    width: 400px;
+  }
+
+  .chat-container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .script-page {
+    padding: 6rem 2rem 2rem;
+    gap: 2rem;
+  }
+
+  .code-editor {
+    width: 350px;
+  }
+
+  .chat-container {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .script-page {
+    flex-direction: column;
+    padding: 6rem 1.5rem 2rem;
+    gap: 2rem;
+  }
+
+  .left-section {
+    width: 100%;
+    align-items: center;
+  }
+
+  .code-editor {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .editor-code {
+    font-size: 0.75rem;
+  }
+
+  .line-numbers {
+    font-size: 0.75rem;
+  }
+
+  .supported-games {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .chat-container {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .message-bubble {
+    max-width: 280px;
+    font-size: 0.9rem;
+  }
+
+  .quick-reply-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .script-page {
+    padding: 5rem 1rem 1.5rem;
+  }
+
+  .code-editor {
+    max-width: 100%;
+  }
+
+  .editor-code {
+    font-size: 0.7rem;
+  }
+
+  .line-numbers {
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+  }
+
+  .editor-body {
+    padding: 0.75rem 0;
+  }
+
+  .code-line {
+    word-break: break-word;
+  }
+
+  .chat-container {
+    max-width: 100%;
+  }
+
+  .chat-messages {
+    min-height: 250px;
+    max-height: 320px;
+    padding: 0.75rem;
+  }
+
+  .message-bubble {
+    max-width: 220px;
+    font-size: 0.85rem;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .user-avatar svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .message-content::before {
+    font-size: 0.85rem;
+  }
+
+  .quick-reply-btn {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .chat-input {
+    padding: 0.5rem 0.75rem;
+    margin: 0 0.75rem 0.75rem;
+  }
+
+  .chat-input input {
+    font-size: 0.9rem;
+  }
+
+  .code-block {
+    padding: 0.5rem;
+  }
+
+  .code-block pre {
+    font-size: 0.7rem;
+  }
+
+  .copy-btn {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .games-list li {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.65rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .script-page {
+    padding: 4.5rem 0.75rem 1rem;
+  }
+
+  .editor-code {
+    font-size: 0.65rem;
+  }
+
+  .line-numbers {
+    font-size: 0.65rem;
+  }
+
+  .message-bubble {
+    max-width: 180px;
+    font-size: 0.8rem;
+  }
+
+  .chat-input input {
+    font-size: 0.85rem;
+  }
 }

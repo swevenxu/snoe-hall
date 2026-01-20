@@ -10,6 +10,10 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -27,10 +31,10 @@ const Navbar = () => {
 
         {/* Center - Navigation Links */}
         <ul className={`navbar-links ${menuOpen ? 'active' : ''}`}>
-          <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
-          <li><Link to="/script" className={location.pathname === '/script' ? 'active' : ''}>Script</Link></li>
-          <li><Link to="/contributors" className={location.pathname === '/contributors' ? 'active' : ''}>Contributors</Link></li>
-          <li><a href="https://discord.gg/cQmCTTnW" target="_blank" rel="noopener noreferrer">Discord</a></li>
+          <li><Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/script" className={location.pathname === '/script' ? 'active' : ''} onClick={closeMenu}>Script</Link></li>
+          <li><Link to="/contributors" className={location.pathname === '/contributors' ? 'active' : ''} onClick={closeMenu}>Contributors</Link></li>
+          <li><a href="https://discord.gg/cQmCTTnW" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Discord</a></li>
         </ul>
       </div>
     </nav>

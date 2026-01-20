@@ -6,7 +6,9 @@ const Snowfall = () => {
 
   useEffect(() => {
     const container = containerRef.current;
-    const snowflakeCount = 50;
+    // Reduce snowflakes on mobile for better performance
+    const isMobile = window.innerWidth <= 768;
+    const snowflakeCount = isMobile ? 25 : 50;
 
     for (let i = 0; i < snowflakeCount; i++) {
       createSnowflake(container);
