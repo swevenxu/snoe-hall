@@ -17,6 +17,55 @@
   align-items: center;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 1.5rem 4rem;
+  }
+  
+  .navbar-links {
+    gap: 1.5rem;
+  }
+  
+  .navbar-links li a {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 1rem 1.5rem;
+  }
+  
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(13, 13, 26, 0.98);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    gap: 2rem;
+  }
+  
+  .navbar-links.active {
+    transform: translateX(0);
+  }
+  
+  .navbar-links li a {
+    font-size: 20px;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+}
+
 /* Branding - Left */
 .navbar-brand a {
   font-family: 'Bebas Neue', sans-serif;

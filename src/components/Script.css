@@ -17,6 +17,57 @@
   }
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .script-page {
+    padding: 6rem 2rem 2rem;
+    gap: 2rem;
+  }
+  
+  .code-editor {
+    width: 380px;
+  }
+  
+  .chat-container {
+    max-width: 380px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .script-page {
+    flex-direction: column;
+    padding: 5rem 1rem 2rem;
+    gap: 1.5rem;
+  }
+  
+  .left-section {
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .code-editor {
+    width: 100%;
+  }
+  
+  .chat-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .status-badge {
+    align-self: center;
+  }
+  
+  .supported-games {
+    align-self: center;
+  }
+  
+  .games-list {
+    justify-content: center;
+  }
+}
+
 .left-section {
   display: flex;
   flex-direction: column;
